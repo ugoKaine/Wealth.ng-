@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="wealthng.login">
+        <methods>
+          <include name="validateLogin"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- wealthng.login -->
+      <class name="wealthng.investmentFixedIncome">
+        <methods>
+          <include name="validateInvestmentFixedIncome"/>
+        </methods>
+      </class> <!-- wealthng.investmentFixedIncome -->
+      <class name="wealthng.liquidateInvestment">
+        <methods>
+          <include name="validateLiquidateInvestment"/>
+        </methods>
+      </class> <!-- wealthng.liquidateInvestment -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
