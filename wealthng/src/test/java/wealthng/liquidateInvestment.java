@@ -1,16 +1,14 @@
 package wealthng;
 
+
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
+
 import java.io.IOException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
-import org.testng.annotations.Test;
-
 import dependency.authUser;
 
 public class liquidateInvestment extends authUser {
@@ -55,12 +53,16 @@ public class liquidateInvestment extends authUser {
 			//String g =driver.findElement(By.xpath("//*[@id=\"swal2-title\"]")).getText();
 			String g=driver.findElement(By.id("swal2-title")).getText();
 			
-			AssertJUnit.assertEquals(g, "Success");
+			Assert.assertEquals(g, "Success");
 			
-			driver.close();
-			
+	}
+	
+	@AfterTest
+	
+	public void teardown()
+	{
+		driver.close();
 		
-			//*[@id="swal2-title"]
 	}
 
 }

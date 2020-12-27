@@ -30,7 +30,7 @@ public class bases {
 		cap.setCapability(ChromeOptions.CAPABILITY, options);
 				
 				Properties prop = new Properties ();
-				FileInputStream fis = new FileInputStream ("//Users//ugo.kaine//eclipse-workspace//wealthng//src//main//java//dependency//data.properties");
+				FileInputStream fis = new FileInputStream ("//Users//ugo.kaine//git//repository//wealthng//src//main//java//dependency//data.properties");
 				prop.load(fis);
 				
 				String browserName = prop.getProperty("browser");

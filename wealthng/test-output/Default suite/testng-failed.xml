@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="wealthng.bvn">
+      <class name="wealthng.liquidateInvestment">
         <methods>
-          <include name="validateBVN"/>
+          <include name="validateLiquidateInvestment"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- wealthng.bvn -->
+      </class> <!-- wealthng.liquidateInvestment -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

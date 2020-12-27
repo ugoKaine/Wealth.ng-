@@ -1,16 +1,15 @@
 package wealthng;
 
-import org.testng.annotations.Test;
+
 import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
 public class bvn {
+	public WebDriver driver;
 	
 	@Test
 
@@ -18,7 +17,7 @@ public class bvn {
 	{
 		 
 		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + "/driver/chromedriver") ;
-	    WebDriver driver = new ChromeDriver();
+		driver = new ChromeDriver();
 	 
 	    driver.get("https://staging.wealth.ng/wealth/intro");
 	    driver.manage().window().maximize();
@@ -31,12 +30,7 @@ public class bvn {
 	    driver.findElement(By.id("login_password")).sendKeys("Batsignal30$"); 
 	    Thread.sleep(2000);
 	    driver.findElement(By.id("kc-login")).click();
-	    Thread.sleep(3000);
-	    
-	   // driver.findElement(By.xpath("/html/body/div[1]/header/div/div/div/div[1]/div[2]/a")).click();
-	    Thread.sleep(3000);
-	    //driver.findElement(By.xpath("//*[@id=\"my-profile\"]/a")).click();
-	    Thread.sleep(3000);
+	    Thread.sleep(3000);	   
 	    
 	    driver.findElement(By.xpath("//a[@class='user-opener']")).click(); Thread.sleep(2000);
 	    driver.findElement(By.linkText("Profile & Settings")).click();  Thread.sleep(4000);
@@ -46,14 +40,14 @@ public class bvn {
 	    
 	    driver.findElement(By.xpath("//*[@id=\"bvn_verify_button\"]")).click();
 	    
-	   String jj= driver.findElement(By.xpath("//*[@id=\"verifyBvn\"]/strong")).getText();
+	   driver.findElement(By.xpath("//*[@id=\"verifyBvn\"]/strong")).getText();
+	   
 	   Thread.sleep(3000);
-	   //Assert.assertEquals(jj, "Enter Your 6-Digit OTP");
 	   
 	   driver.close();
-	 
-		
 		
 	}
+	
+	
 	
 }

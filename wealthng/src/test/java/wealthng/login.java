@@ -1,16 +1,12 @@
 package wealthng;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
+
 import java.io.IOException;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.Test;
-
 import dependency.bases;
 
 public class login extends bases {
@@ -31,7 +27,7 @@ public class login extends bases {
 		driver.findElement(By.id("kc-login")).click();
 		Thread.sleep(3000);
 		String a = driver.findElement(By.xpath("//a[@class='user-opener']")).getText();
-		AssertJUnit.assertEquals(a, "CHIBUGO");
+		Assert.assertEquals(a, "CHIBUGO");
 		
 		
 	}

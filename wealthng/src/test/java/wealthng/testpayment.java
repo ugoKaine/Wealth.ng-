@@ -1,9 +1,8 @@
 package wealthng;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+
+import org.testng.annotations.AfterTest;
 import org.testng.Assert;
 import java.util.Map;
 import java.util.Set;
@@ -109,15 +108,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 	    c = c.replaceAll("[^0-9.]", "");
 	    float cc = Float.parseFloat(c);
 	    
-	    AssertJUnit.assertEquals(cc, sum);
+	    Assert.assertEquals(cc, sum);
 	    
 	    
 	    driver.findElement(By.xpath("//a[@class='user-opener']")).click(); Thread.sleep(2000);
 	    driver.findElement(By.linkText("Log Out")).click();  Thread.sleep(4000);
-	   
+	    
 	    driver.close();
 	   
 	  }
+	  
+		
 	}
 
 

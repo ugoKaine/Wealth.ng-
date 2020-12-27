@@ -1,15 +1,11 @@
 package wealthng;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.Test;
 
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
 import dependency.authUser;
 
 public class withdrawal extends authUser{
@@ -31,13 +27,19 @@ public class withdrawal extends authUser{
 		
 		String e =driver.findElement(By.xpath("//*[@id=\"withdrawalOTPModal\"]/div[2]/strong")).getText();
 		
-		AssertJUnit.assertEquals(e, "OTP Verification");
+		Assert.assertEquals(e, "OTP Verification");
 		
 		
 		driver.navigate().back();
 		
-		driver.close();
 		
+	}
+	
+	@AfterTest
+	
+	public void teardown()
+	{
+		driver.close();
 		
 	}
 

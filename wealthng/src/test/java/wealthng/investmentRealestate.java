@@ -1,5 +1,6 @@
 package wealthng;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import java.io.IOException;
@@ -22,10 +23,15 @@ public class investmentRealestate extends authUser {
 		
 		driver.findElement(By.xpath("//*[@id=\"tab_RE\"]/a")).click();
 		System.out.println("No realestate investment yet");
+		
+		
+	}
 	
-		
+	@AfterTest
+	
+	public void teardown()
+	{
 		driver.close();
-		
 		
 	}
 

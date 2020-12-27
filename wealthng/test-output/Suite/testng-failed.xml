@@ -3,20 +3,10 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="wealthng.login">
-        <methods>
-          <include name="validateLogin"/>
-          <include name="close"/>
-        </methods>
-      </class> <!-- wealthng.login -->
-      <class name="wealthng.investmentFixedIncome">
-        <methods>
-          <include name="validateInvestmentFixedIncome"/>
-        </methods>
-      </class> <!-- wealthng.investmentFixedIncome -->
       <class name="wealthng.liquidateInvestment">
         <methods>
           <include name="validateLiquidateInvestment"/>
+          <include name="teardown"/>
         </methods>
       </class> <!-- wealthng.liquidateInvestment -->
     </classes>
