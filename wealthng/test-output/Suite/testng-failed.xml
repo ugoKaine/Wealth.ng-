@@ -3,6 +3,46 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="wealthng.login">
+        <methods>
+          <include name="validateLogin"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- wealthng.login -->
+      <class name="wealthng.investmentFixedIncome">
+        <methods>
+          <include name="teardown"/>
+          <include name="validateInvestmentFixedIncome"/>
+        </methods>
+      </class> <!-- wealthng.investmentFixedIncome -->
+      <class name="wealthng.investmentAgriculture">
+        <methods>
+          <include name="teardown"/>
+          <include name="validateInvestmentAgriculture"/>
+        </methods>
+      </class> <!-- wealthng.investmentAgriculture -->
+      <class name="wealthng.withdrawal">
+        <methods>
+          <include name="teardown"/>
+          <include name="validateWithdrawal"/>
+        </methods>
+      </class> <!-- wealthng.withdrawal -->
+      <class name="wealthng.bvn">
+        <methods>
+          <include name="validateBVN"/>
+        </methods>
+      </class> <!-- wealthng.bvn -->
+      <class name="wealthng.testpayment">
+        <methods>
+          <include name="validateAccountFunding"/>
+        </methods>
+      </class> <!-- wealthng.testpayment -->
+      <class name="wealthng.investmentRealestate">
+        <methods>
+          <include name="validateInvestmentRealestate"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- wealthng.investmentRealestate -->
       <class name="wealthng.liquidateInvestment">
         <methods>
           <include name="validateLiquidateInvestment"/>
