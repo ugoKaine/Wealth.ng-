@@ -4,6 +4,14 @@
   <artifactId>wealthng</artifactId>
   <version>0.0.1-SNAPSHOT</version>
     <build>
+    
+      <resources>
+        <resource>
+            <directory>src/main/java/dependency</directory>
+            <filtering>true</filtering> 
+        </resource>
+    </resources>
+    
     <pluginManagement>
       <plugins>
         <plugin>

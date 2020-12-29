@@ -28,6 +28,7 @@ public class bases {
 		options.setExperimentalOption("prefs", prefs);
 		DesiredCapabilities cap = DesiredCapabilities.chrome();
 		cap.setCapability(ChromeOptions.CAPABILITY, options);
+		//"/Users/ugo.kaine/git/repository/wealthng/src/main/java/dependency/data.properties"
 				
 				Properties prop = new Properties ();
 				FileInputStream fis = new FileInputStream ("//Users//ugo.kaine//git//repository//wealthng//src//main//java//dependency//data.properties");
